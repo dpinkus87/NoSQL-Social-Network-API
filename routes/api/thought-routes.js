@@ -4,6 +4,6 @@ const {
 
 
 
-}
+} = require('../../controllers/thoughtController')
 
     module.exports = router;

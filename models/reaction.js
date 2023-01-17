@@ -1,9 +1,9 @@
-const { Schema, model } = require('mongoose');
+const { Schema } = require('mongoose');
 
 // Schema to create Post model
 const reactionSchema = new Schema(
   {
-    reactionId: {type: ObjectId,default: new.ObjectId},
+    reactionId: {type: Schema.Types.ObjectId},
     reactionBody: {type: String, required: true, maxLength: 280},
     username: [
       {type: String,required: true},
@@ -18,9 +18,7 @@ const reactionSchema = new Schema(
   }
 );
 
-const Reaction = model('post', reactionSchema);
-
-module.exports = Reaction;
+module.exports = reactionSchema;
 
 
 // ** TODO Schema Settings **:
